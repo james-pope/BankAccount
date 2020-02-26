@@ -5,7 +5,7 @@ public class SavingsAccount extends Account {
         interest = AnnInterest;
     }
     public void withdraw(double amt){
-        if (amt > currentBalance()) throw new IllegalArgumentException();
+        if (amt > currentBalance()) System.out.println("Error: Withdraw exceeds available balance");
         else decreaseBalance(amt);
     }
     public double monthlyInterest(){
